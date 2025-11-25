@@ -69,100 +69,40 @@ export default function Newsletter() {
       ref={modalElement}
     >
       <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content">
-          <div className="modal-top">
+        <div className="modal-content overflow-hidden rounded-2xl">
+          {/* Image + Discount Badge */}
+          <div className="modal-top mx-auto relative flex justify-center p-4">
+            <span className="absolute top-4 left-4 bg-red-600 text-white text-xs px-3 py-1 rounded-full shadow-md">
+              -25% OFF
+            </span>
+
             <Image
-              className="lazyload"
-              data-src="/images/section/newsletter-1.jpg"
-              alt="images"
-              src="/images/section/newsletter-1.jpg"
-              width={1500}
-              height={870}
-            />
-            <span
-              className="icon icon-close btn-hide-popup"
-              data-bs-dismiss="modal"
+              className="rounded-lg shadow-lg"
+              alt="Offer"
+              src="https://amzadfood.com/wp-content/uploads/2025/03/%E0%A6%9A%E0%A6%BF%E0%A6%AF%E0%A6%BE%E0%A6%BC-%E0%A6%B8%E0%A6%BF%E0%A6%A1%E0%A6%B8-%E0%A6%B9%E0%A6%BE%E0%A6%A8%E0%A6%BF-%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%8B-400x400.webp"
+              width={200}
+              height={200}
+              style={{ width: "200px", height: "200px", objectFit: "cover" }}
             />
           </div>
-          <div className="modal-bottom text-center">
-            <h5 className="title">Sign up to our Newsletter</h5>
-            <p className="text text-sm text-main">
-              Be the first to get the latest news about trends, <br />
-              promotions, and much more!
-            </p>
-            <div
-              className={`tfSubscribeMsg  footer-sub-element ${
-                showMessage ? "active" : ""
-              }`}
-            >
-              {success ? (
-                <p style={{ color: "rgb(52, 168, 83)" }}>
-                  You have successfully subscribed.
-                </p>
-              ) : (
-                <p style={{ color: "red" }}>Something went wrong</p>
-              )}
+
+          {/* Content */}
+          <div className="modal-bottom text-center px-6 pb-6">
+            <h5 className="text-2xl font-semibold mb-1">
+              🔥 Combo Special Offer!
+            </h5>
+            <p className="text-gray-600 mb-2">Chia Seeds + Honey Combo Pack</p>
+
+            {/* Pricing */}
+            <div className="flex justify-center items-center gap-2 mb-4">
+              <span className="text-2xl font-bold text-green-600">৳850</span>
+              <span className="line-through text-gray-400 text-lg">৳1100</span>
             </div>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                sendEmail(e);
-              }}
-              id="subscribe-form"
-              className="form-newsletter"
-            >
-              <div className="mb_20">
-                <fieldset className="email position-relative">
-                  <i className="icon icon-mail" />
-                  <input
-                    type="email"
-                    name="email"
-                    className=""
-                    placeholder="Your email address"
-                    tabIndex={0}
-                    aria-required="true"
-                    required
-                  />
-                </fieldset>
-              </div>
-              <button
-                className="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
-                type="submit"
-              >
-                Send
-              </button>
-            </form>
-            <ul className="tf-social-icon style-default justify-content-center">
-              <li>
-                <a href="https://x.com/" className="social-x">
-                  <i className="icon icon-x" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/" className="social-facebook">
-                  <i className="icon icon-fb2" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  className="social-instagram"
-                >
-                  <i className="icon icon-instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/" className="social-youtube">
-                  <i className="icon icon-youtube" />
-                </a>
-              </li>
-            </ul>
-            <p className="text text-sm mb-0 text-main">
-              Will be used in accordance with our{" "}
-              <Link href={`/privacy-policy`} className="fw-medium">
-                Privacy Policy
-              </Link>
-            </p>
+
+            {/* Order Now Button */}
+            <button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-all shadow-md mb-3">
+              🛒 Order Now
+            </button>
           </div>
         </div>
       </div>

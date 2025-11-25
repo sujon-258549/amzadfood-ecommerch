@@ -85,7 +85,7 @@ export default function Newsletter2() {
             />
           </div>
           <div className="modal-bottom text-center">
-            <h5 className="title">Sign up to our Newsletter</h5>
+            <h5 className="title">Sign up to our Newsletter 222222222</h5>
             <p className="text text-sm text-main">
               Be the first to get the latest news about trends, <br />
               promotions, and much more!

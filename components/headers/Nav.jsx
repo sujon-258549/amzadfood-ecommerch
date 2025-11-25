@@ -30,15 +30,15 @@ export default function Nav() {
       {" "}
       <li className="menu-item">
         <a
-          href="#"
+          href="/"
           className={`item-link ${
             isMenuParentActive(demoItems) ? "menuActive" : ""
           } `}
         >
           Home
-          <i className="icon icon-arr-down" />
+          {/* <i className="icon icon-arr-down" /> */}
         </a>
-        <div className="sub-menu mega-menu mega-home">
+        {/* <div className="sub-menu mega-menu mega-home">
           <div className="box-search">
             <div className="tf-select">
               <select name="pagetype" id="pagetype">
@@ -108,7 +108,7 @@ export default function Nav() {
               <i className="icon icon-arr-right" />
             </a>
           </div>
-        </div>
+        </div> */}
       </li>
       <li className="menu-item">
         <a
@@ -307,11 +307,7 @@ export default function Nav() {
           </div>
         </div>
       </li>
-      <li className="menu-item">
-        <a href="https://themeforest.net/user/themesflat" className="item-link">
-          Buy Theme!
-        </a>
-      </li>
+     
     </>
   );
 }
